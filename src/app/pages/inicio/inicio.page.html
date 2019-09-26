@@ -1,0 +1,38 @@
+<ion-header no-border>
+  <ion-toolbar color="facebook">
+    <ion-button (click)="presentPopover($event)" mode="md" color="facebook" fill="outline">
+      <ion-label class="pointer dropdown-toggle text-size" color="light">Total $ {{total | number}}</ion-label>
+    </ion-button>
+    <ion-title text-capitalize id="titulo-header" slot="secondary">Menú</ion-title>
+    <div class="mr-3" slot="end">
+      <ion-badge class="badge-cart" color="danger" mode="ios">{{DataCarrito.length}}</ion-badge>
+      <ion-button id="icon-size" mode="md" (click)="redireccionCarrito()" color="facebook" class="ml-0" fill="outline"
+        slot="end">
+        <ion-icon mode="md" class="antes" color="light" slot="icon-only" name="cart"></ion-icon>
+      </ion-button>
+    </div> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="animated fadeIn">
+  <div class="container">
+    <ion-label color="facebook">
+      <h1 class="ion-text-center mt-4"> ¿ Que Deseas Ordenar ?</h1>
+    </ion-label>
+    <ion-grid class="custom-grid" fixed>
+      <ion-row class="mt-4">
+        <ion-col class="animated fadeIn fast" *ngFor="let grupos of listaGrupoVenta" size="5" >
+          <ion-button mode="md" expand="block" (click)="redireccion(grupos.id,grupos.nombre)" class="mb-3 inicio-btn"
+            color="light">
+            <img class="img" *ngIf="!grupos.noImage" [src]="grupos.imagen" alt="">
+            <div *ngIf="grupos.noImage"><img class="img" src="assets/img/no-image.png" alt=""></div>
+            <div  class="center-text-buttom">{{grupos.nombre}}</div>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+
+
+<app-footer></app-footer>

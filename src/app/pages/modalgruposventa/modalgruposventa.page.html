@@ -1,0 +1,15 @@
+<ion-content
+ *ngFor="let data of datosGrupoVenta">
+<ion-card>
+  <ion-icon (click)="dismiss()" class="icon-class" size="large" color="medium" slot="end" name="close"></ion-icon>
+  <img [src]="data.imagen" alt="no-image">
+  <ion-card-header>
+    <ion-card-title class="ion-text-capitalize" >{{data.nombreArticulo}}</ion-card-title>
+    <ion-badge class="mt-2 texto" color="danger" mode="ios">$ {{data.valorVenta}}</ion-badge>
+  </ion-card-header>
+  <ion-card-content>
+     <ion-label color="dark">{{data.descripcion}}</ion-label> 
+  </ion-card-content>
+
+</ion-card>
+</ion-content>

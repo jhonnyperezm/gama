@@ -1,0 +1,227 @@
+[
+    {
+        "id": 1,
+        "nombre": "Pizza Margarita",
+        "img": "./img/margarita.jpg",
+        "precio": 16000,
+        "ingredientes": [
+            {
+                "id": 1,
+                "nombre": "Queso Mozzarela"
+            },
+            {
+                "id": 2,
+                "nombre": "Salsa de Tomate"
+            },
+            {
+                "id": 3,
+                "nombre": "Sal"
+            },
+            {
+                "id": 4,
+                "nombre": "pimienta"
+            },
+            {
+                "id": 5,
+                "nombre": "Aceite de Oliva"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "nombre": "Pizza Napolitana",
+        "img": "./img/napolitana.jpg",
+        "precio": 15000,
+        "ingredientes": [
+            {
+                "id": 1,
+                "nombre": "Queso Mozzarela"
+            },
+            {
+                "id": 2,
+                "nombre": "Salsa de Tomate"
+            },
+            {
+                "id": 3,
+                "nombre": "Sal"
+            },
+            {
+                "id": 4,
+                "nombre": "pimienta"
+            },
+            {
+                "id": 5,
+                "nombre": "Aceite de Oliva"
+            },
+            {
+                "id": 6,
+                "nombre": "tomates chreey"
+            },
+            {
+                "id": 7,
+                "nombre": "Albahaca"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "nombre": "Pizza Mexicana",
+        "img": "./img/mexicana.jpg",
+        "precio": 18000,
+        "ingredientes": [
+            {
+                "id": 1,
+                "nombre": "Queso Mozzarela"
+            },
+            {
+                "id": 2,
+                "nombre": "Salsa de Tomate"
+            },
+            {
+                "id": 3,
+                "nombre": "Sal"
+            },
+            {
+                "id": 4,
+                "nombre": "Pimienta"
+            },
+            {
+                "id": 5,
+                "nombre": "Aceite de Oliva"
+            },
+            {
+                "id": 6,
+                "nombre": "Jalapeños"
+            },
+            {
+                "id": 7,
+                "nombre": "Chorizo Picante"
+            },
+            {
+                "id": 8,
+                "nombre": "Jamón"
+            },
+            {
+                "id": 9,
+                "nombre": "Pimentón"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "nombre": "Pizza Hawaiana",
+        "img": "./img/hawaiana.jpg",
+        "precio": 18500,
+        "ingredientes": [
+            {
+                "id": 1,
+                "nombre": "Queso Mozzarela"
+            },
+            {
+                "id": 2,
+                "nombre": "Salsa de Tomate"
+            },
+            {
+                "id": 3,
+                "nombre": "Sal"
+            },
+            {
+                "id": 4,
+                "nombre": "Pimienta"
+            },
+            {
+                "id": 5,
+                "nombre": "Aceite de Oliva"
+            },
+            {
+                "id": 6,
+                "nombre": "Piña"
+            },
+            {
+                "id": 7,
+                "nombre": "Jamón"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "nombre": "Pizza Vegetariana",
+        "img": "./img/vegetariana.jpg",
+        "precio": 15500,
+        "ingredientes": [
+            {
+                "id": 1,
+                "nombre": "Queso Mozzarela"
+            },
+            {
+                "id": 2,
+                "nombre": "Salsa de Tomate"
+            },
+            {
+                "id": 3,
+                "nombre": "Sal"
+            },
+            {
+                "id": 4,
+                "nombre": "Pimienta"
+            },
+            {
+                "id": 5,
+                "nombre": "Aceite de Oliva"
+            },
+            {
+                "id": 6,
+                "nombre": "Champiñones"
+            },
+            {
+                "id": 7,
+                "nombre": "Berenjena"
+            },
+            {
+                "id": 8,
+                "nombre": "Cebolla"
+            },
+            {
+                "id": 9,
+                "nombre": "Aceitunas Negras"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "nombre": "Pizza Pepperoni",
+        "img": "./img/peperoni.jpg",
+        "precio": 17500,
+        "ingredientes": [
+            {
+                "id": 1,
+                "nombre": "Queso Mozzarela"
+            },
+            {
+                "id": 2,
+                "nombre": "Salsa de Tomate"
+            },
+            {
+                "id": 3,
+                "nombre": "Sal"
+            },
+            {
+                "id": 4,
+                "nombre": "Pimienta"
+            },
+            {
+                "id": 5,
+                "nombre": "Aceite de Oliva"
+            },
+            {
+                "id": 6,
+                "nombre": "Jamón"
+            },
+            {
+                "id": 7,
+                "nombre": "Pepperoni"
+            }
+        ]
+    }
+
+]

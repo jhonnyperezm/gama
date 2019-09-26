@@ -1,0 +1,156 @@
+<ion-header no-border>
+  <ion-toolbar color="facebook">
+    <ion-buttons slot="start">
+      <ion-back-button mode="md" defaultHref="inicio"></ion-back-button>
+    </ion-buttons>
+    <ion-title id="titulo-header" class="ion-text-center">Carrito de Compras </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header translucent="true" no-border>
+  <ion-toolbar class="light2">
+    <div class=" flex-container flex-row-reverse mr-5">
+      <div class="pt-3">
+
+        <ion-badge name="totalAdicionalesMasArt" ngDefaultControl [(ngModel)]="totalAdicionalesMasArt"
+          class="p-2 mt-2  animated pulse" color="danger" mode="ios" outline="true">
+          <ion-label class="texto">Total $ {{total}}</ion-label>
+        </ion-badge>
+
+      </div>
+      <h3 class="p-2 bd-highlight">Total a Pagar </h3>
+
+      <h2  class="titulo-carrito" [ngClass]="{tituloCarrito: total ===0}" >Tu Pedido</h2>
+    </div>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="animated fadeIn" padding>
+  <div class="container ">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="12">
+          <ion-list *ngFor="let data of carritoFinal; let i = index" class="ion-activatable animated fadeIn " #lista
+            inset="true" mode="ios">
+            <ion-item-sliding>
+              <ion-item class="borde rounded rounded">
+                <ion-thumbnail slot="start">
+                  <img [src]="data.imagen">
+                </ion-thumbnail>
+                <ion-icon color="danger" slot="end" mode="md" name="arrow-dropleft-circle"></ion-icon>
+
+                <ion-label *ngIf="data.adicionales !== ''"  >
+                  <h2>{{data.nombreArticulo}}</h2>
+                  <ion-label  >${{data.valorVentaFinal}}</ion-label>
+                </ion-label>
+                <ion-label  *ngIf="data.adicionales ===''">
+                  <h2>{{data.nombreArticulo}}</h2>
+                  <ion-label>${{data.valorVenta}}</ion-label>
+                </ion-label>
+
+                <ion-label class="ion-text-center"  >
+                  Cantidad
+                  <ion-text slot="end" color="dark" >
+                    <h1 [ngClass]="{'pl-4 mover' : data.adicionales.length != 0}" class="texto-1">
+                      <ion-icon *ngIf="data.adicionales == ''"  id="mover" (click)="restarCantidad(data, i)"  color="facebook"
+                        class="size " name="remove-circle-outline"></ion-icon>
+                         {{data.cantidad}}
+                      <ion-icon *ngIf="data.adicionales == ''" (click)="sumarCantidad(data)"  color="facebook"
+                        class="size" name="add-circle-outline"></ion-icon>
+                    </h1>
+                  </ion-text>
+                </ion-label>
+                <ion-label>
+                  Adicionales
+                  <ion-label *ngFor="let dataAdi of data.adicionales">
+                    <p *ngIf="data.adicionales != undefined" class="text-lh">{{dataAdi.nombreArticuloAdicional}}</p>
+                  </ion-label>
+
+                  <ion-label class="ml-3" *ngIf="data.adicionales.length == ''">
+                    <p>Ninguna</p>
+                  </ion-label>
+                </ion-label>
+
+                <ion-label *ngIf="data.adicionales.length !== 0" data-backdrop="false"  data-toggle="modal" data-target="#modalAdicionales" (click)="bindingAdicionales(data )">
+                  <ion-badge class="p-2 editar" color="primary" mode="ios">Editar</ion-badge>
+                </ion-label>
+                <ion-label *ngIf="data.adicionales.length == 0" data-backdrop="false"  data-toggle="modal" data-target="#modalAdicionales" (click)="bindingAdicionales(data )">
+                  <ion-badge color="primary" mode="ios"></ion-badge>
+                </ion-label>
+
+              </ion-item>
+              <!-- *ngIf="item.contadorArt >= 1" (click)="borrar(item.idArticulo, i)" -->
+              <ion-item-options side="end">
+                <ion-item-option (click)="borrar(data , i)" color="danger">
+                  <ion-icon slot="icon-only" name="close"></ion-icon>
+                </ion-item-option>
+              </ion-item-options>
+
+            </ion-item-sliding>
+          </ion-list>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>
+
+  <ion-toolbar class="ion-toolbar">
+    <ion-button (click)="elimninarPedido()" color="facebook" class="eliminar animated bounceIn ">
+      Eliminar Pedido
+    </ion-button>
+    <ion-button (click)="seguirComprando()" color="facebook" class="seguir animated bounceIn ">
+      Seguir Comprando
+    </ion-button>
+    <ion-button (click)="enviarPedido()" color="facebook" class="enviar animated bounceIn ">
+      Enviar Pedio
+    </ion-button>
+  </ion-toolbar>
+
+<app-footer></app-footer>
+
+<!-- Modal -->
+<div class="modal fade" id="modalAdicionales" tabindex="-1" role="dialog" aria-labelledby="modalAdicionales"
+aria-hidden="true">
+<div class="sombra"></div>
+    <div class="modal-dialog " role="document">
+      <div id=example class="modal-content">
+        <div id="modal-header" class="modal-header">
+          <h3 class="modal-title modal-title-custom" id="modalAdicionales">Adicionales</h3>
+          <button  type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span> 
+            </button>
+        </div>
+        <div class="modal-body">
+
+          <ion-grid fixed>
+            <ion-row>
+              <ion-col size="12">
+                <ion-list>
+
+                  <ion-item *ngFor="let item of articulo.adicionales">
+                    <div>
+                      <ion-label color="dark">{{item.nombreArticuloAdicional}}</ion-label>
+                    </div>
+                    <ion-icon (click)="borrarAdicional(item.idx)" color="danger" slot="end" size="large" name="trash">
+                    </ion-icon>
+
+                  </ion-item>
+                </ion-list>
+
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+        </div>
+        <div class="modal-footer">
+          <ion-button data-dismiss="modal" color="verdegama">
+            Guardar y Salir
+          </ion-button>
+
+        </div>
+      </div>
+    </div>
+  </div>

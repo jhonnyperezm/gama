@@ -1,0 +1,85 @@
+<ion-header no-border>
+  <ion-toolbar color="facebook">
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="facebook" class="ion-padding">
+  <div class="container mt-5">
+
+    <ion-grid class="box-shadow color1" fixed>
+      <ion-row>
+        <ion-col  class="color1" size="6">
+          <form method="post" name="loginForm" (submit)="LoginUser($event)" class="p-5 ">
+            <div class="form-group row">
+                <div>
+                  <h2 class="login-title">Inicio de Sesión</h2>
+                </div>
+              <div class="col-sm-10">
+                <ion-label color="dark" for="inputText3" class=" col-form-label">Usuario</ion-label>
+                <input type="email" class="form-control" id="email" placeholder="Usuario">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                     <div class="contrasena-label">
+                       <ion-label color="dark" for="inputPassword3" class="col-form-label">Contraseña</ion-label>
+
+                     </div>
+             
+                <input type="password" class="form-control" id="pass" placeholder="Contraseña">
+              </div>
+              <div class="olvido-contrasena">
+                <p class="custom-m1"> ¿Olvido su contraseña?</p>
+              </div>
+            </div>
+
+            <button class="btn custom-m">Entrar</button>
+            <!--  <ion-button class="custom-m" slot="secondary" color="facebook" >
+                Entrar
+              </ion-button> -->
+
+          </form>
+        </ion-col>
+        <ion-col class="color1 display" size="6">
+          <div class="a1" id="carouselExampleInterval" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-interval="5000">
+                <img src="../../../assets/img/disfruta+de+todo.jpg" class="d-block " alt="El Carnal">
+              </div>
+              <div class="carousel-item" data-interval="5000">
+                <img src="../../../assets/img/ryan-concepcion-50KffXbjIOg-unsplash.jpg" class="d-block" alt="...">
+              </div>
+              <div class="carousel-item h-100 w-100" data-interval="5000">
+                <img src="../../../assets/img/rodolfo-magallanes-MaHkiMGQFZM-unsplash.jpg" class="d-block" alt="...">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next " href="#carouselExampleInterval" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </ion-col>
+
+      </ion-row>
+
+    </ion-grid>
+    <div class="footer">
+      <small>Bogota: Kra 70H # 122 - 22 pbx 2269296 | Barranquilla: calle 76 # 50 - 10 of 301 tels: 3600965 - 3686538 |
+        Cali:
+        avenida
+        5ª # 17 - 98 of 603 tels: 3827115 - 3827941</small>
+      <br>
+
+      <small><a href="http://www.gamasoftcol.com"></a>
+        www.gamasoftcol.com</small>
+
+      <br>
+      <small>Todos los derechos reservados 2019 - S.I.U S.A.S</small>
+    </div>
+  </div>
+</ion-content>

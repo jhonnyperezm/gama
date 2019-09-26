@@ -1,0 +1,94 @@
+.badge-cart{
+    position: absolute;
+    margin-top: 3px;
+    margin-right: 10px;
+    width: 30px;
+    z-index: 1;
+}
+
+.flex {
+ display: flex;
+ align-content: center
+}
+
+.text-size{
+    font-size: 1.3rem;
+}
+
+#icon-size{
+    height: 60px;
+    width: 100px;
+}
+
+#titulo-header{
+    font-size: 1.7rem;
+}
+
+.custom-grid{
+    /* margin-left: 1%; */
+    margin-left: 8%;
+}
+
+.img-container{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 100%;
+    height: 100%;
+}
+
+// .img{
+//     position: absolute;
+//     top: 26px;
+//     right: 115px;
+//     width: 150px;
+//     height: 140px;
+// //    /*  position: absolute;
+// //     top: 26px;
+// //     right: 70px;
+// //     width: 150px;
+// //     height: 140px; */
+
+//  }
+
+.center-text-buttom{
+    text-transform: capitalize;
+    position: relative;
+    top: 72px;
+    right: 0%;
+    font-size: 1.5rem;
+    color: #333; 
+}
+
+@media (max-width: 742px){
+    
+#titulo-header{
+    font-size: 1rem;
+    margin-left:100px; 
+}
+.text-size{
+    font-size: 1rem;
+}
+#icon-size{
+    height: 40px;
+    width: 100px;
+}
+
+.badge-cart{
+    position: absolute;
+    margin-top: 1px;
+    right: 70px;
+    width: 20px;
+    z-index: 1;
+}
+
+.antes{
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    /* z-index: 1px; */
+}
+
+}
+
+

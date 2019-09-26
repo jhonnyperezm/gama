@@ -1,0 +1,77 @@
+.color1{
+    background-color: #e7e7e7;
+}
+
+.color2{
+    background-color: blue;
+}
+
+.avatar{
+   /*  margin-left: 35%; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+.chip-box{
+    margin-left: 30%;
+}
+
+.ion-flex{
+    display: flex;
+}
+.asterisco{
+    color: red !important;
+}
+ion-chip{
+    background-color: #3b5998;
+    border-color: #3b5998;
+  }
+
+.texto{
+    font-size: 1.1rem;
+}
+
+.borde{
+    border: 1px solid  #3b5998;
+    
+}
+
+.borde-bottom{
+    border-bottom: 1px solid  #3b5998;
+}
+
+.custom-label{
+    margin-left:10px; 
+}
+
+#badge{
+  margin-left: 200px;
+}
+
+.text-size{
+    font-size: 1.3rem;
+}
+
+#icon-size{
+    height: 60px;
+    width: 100px;
+}
+#titulo-header{
+    font-size: 1.7rem;
+}
+
+/* #bg-hover::selection{
+    background-color: #3b5998;
+} */
+
+
+#bg-hover{
+    background: white !important;
+    transition: 1s ;
+    
+}
+#bg-hover:hover{
+    background: #cedfff !important ;
+}

@@ -1,0 +1,69 @@
+.back-buttom{
+ position: sticky;
+ left: 0;
+ top: 50%;
+ 
+ margin-left:-180px; 
+ z-index: 1;
+
+}
+
+.custom-btn{
+    position: absolute;
+    width: 20%;
+    top: 80%;
+    left: 40%;
+ 
+}
+
+ion-thumbnail{
+    height: 75px;
+    width: 80px;
+}
+
+.bg-light{
+    height: 70px;
+    width: 100%;
+    background-color: white !important;
+}
+
+
+.search-icon{
+     position: absolute;
+     bottom: 2px;
+     left: 85px; 
+}
+
+#icon-size{
+    height: 60px;
+    width: 100px;
+}
+
+@media (max-width: 1024px ){
+    .search-icon{
+        position: absolute;
+        bottom: 2px;
+        right: 318px; 
+   }
+   .back-buttom{
+    position: sticky;
+    left: 0;
+    top: 50%;
+    margin-left:-30px; 
+    z-index: 1;
+   
+   }
+   
+}
+
+/* .custom-bg{
+   
+    background-image: url("../../../assets/img/389.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+ */
+
+
+

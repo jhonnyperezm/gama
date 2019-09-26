@@ -1,0 +1,62 @@
+<app-header titulo={{this.nomGru}} contadorCart={{DataCarrito.length}} total={{total}}></app-header>
+
+<ion-content class="animated fadeIn" padding>
+  <div class="custom-bg container" >
+
+  <ion-label class="animated fadeIn" color="facebook">
+    <h1 text-capitalize class="ion-text-center mt-2">{{this.nomGru}}<ion-badge color="facebook" class="ml-3 " mode="ios"
+        slot="end">{{contadorPrincipal}}</ion-badge>
+    </h1>
+  </ion-label>
+
+  <a *ngIf="listaArticulos.length >=1" (click)="redireccionHome()" role="button">
+    <ion-icon color="dark" class="back-buttom animated fadeIn" size="large" mode="ios" name="arrow-back"></ion-icon>
+  </a>
+
+  <div class="container">
+    <ion-grid class="mt-3" fixed>
+      <ion-row>
+        <ion-col class="animated lightSpeedIn" size="6" *ngFor="let item of listaArticulos; let i = index">
+          <ion-list lines="none" class=ion-activatable #lista mode="ios">
+            <ion-item-sliding lines="none">
+              <ion-item class="borde rounded" lines="none">
+                <ion-thumbnail class="absolute" slot="start">
+                  <img class="viewport-img" (click)="openModal(item)" [src]="item.imagen">
+                  <ion-icon size="large" color="medium" name="search" class="search-icon "></ion-icon>
+                </ion-thumbnail>
+                <ion-badge (click)="incrementarContador(item, i)" color="facebook" mode="ios" slot="end"
+                  [(ngModel)]="item.contadorArt" name="contadorArt" ngDefaultControl> {{item.contadorArt}}</ion-badge>
+                <ion-icon *ngIf="item.contadorArt >= 1" slot="end" mode="md" color="danger"
+                  name="arrow-dropleft-circle"></ion-icon>
+                <ion-label *ngIf="item.seleccion" [routerLink]="['/gruposventaseleccion',idGru,nomGru,item.idArticulo]">
+                  <ion-label class="ion-text-capitalize" >{{item.nombreArticulo}} </ion-label>
+                  <ion-label>$ {{item.valorVenta}}</ion-label>
+                  <ion-label>{{item.descripcion}}</ion-label>
+                </ion-label>
+                <ion-label *ngIf="!item.seleccion" (click)="incrementarContador(item, i)">
+                  <ion-label class="ion-text-capitalize">{{item.nombreArticulo}} </ion-label>
+                  <ion-label>$ {{item.valorVenta}}</ion-label>
+                  <ion-label>{{item.descripcion}}</ion-label>
+                </ion-label>
+                <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+              </ion-item>
+              <ion-item-options side="end">
+                <ion-item-option *ngIf="item.contadorArt >= 1" (click)="borrar(item.idArticulo, i)" color="danger">
+                  <ion-icon slot="icon-only" name="close"></ion-icon>
+                </ion-item-option>
+              </ion-item-options>
+            </ion-item-sliding>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</div>
+</ion-content>
+<div class="bg-light">
+  <ion-button (click)="redireccionHome()" color="facebook animated bounceIn" class="custom-btn">Seguir Comprando
+  </ion-button>
+  
+</div>
+<app-footer></app-footer>

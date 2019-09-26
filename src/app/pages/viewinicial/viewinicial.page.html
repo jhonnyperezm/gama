@@ -1,0 +1,26 @@
+<ion-header no-border>
+    <ion-toolbar color="facebook">
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content class="ion-padding">
+
+    <div class="container">
+        <ion-avatar class="mx-auto my-5 border border-secondary avatar-size animated fadeIn fast">
+            <img src="../../../assets/img/carnal.jfif">
+        </ion-avatar>
+        <h1 class="text-center animated fadeIn cls">Realiza tu Pedido Aquí !</h1>
+      
+        <ion-button size="large" slot="icon-only" class="custom-btn animated bounceIn " color="facebook" (click)="iniciar()">
+            Iniciar <br><ion-icon  name="finger-print"></ion-icon>
+        </ion-button> 
+        <ion-list *ngFor="let data of dataJson">
+         <ion-item>
+           <ion-label>{{data.name}}</ion-label>
+         </ion-item>
+        </ion-list>  
+      </div>
+      
+</ion-content>
+<img class="custom-logo animated fadeIn "  src="../../../assets/img/gamasoft.png" >
+<app-footer ></app-footer>

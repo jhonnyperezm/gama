@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "nombre": "Agua Mineral",
+        "img": "./img/agua.jpg",
+        "precio": 2000
+    },
+    {
+        "id": 2,
+        "nombre": "Pepsi",
+        "img": "./img/pepsi.jpg",
+        "precio": 3000
+    },
+    {
+        "id": 3,
+        "nombre": "Coca Cola",
+        "img": "./img/cocacola.jpg",
+        "precio": 3000
+    },
+    {
+        "id": 4,
+        "nombre": "Fanta",
+        "img": "./img/fanta.jpg",
+        "precio": 3000
+    },
+    {
+        "id": 5,
+        "nombre": "Cerveza",
+        "img": "./img/cerveza.jpg",
+        "precio": 3000
+    },
+    {
+        "id": 6,
+        "nombre": "Botella de Vino",
+        "img": "./img/vino.jpg",
+        "precio": 30000
+    }
+    
+]

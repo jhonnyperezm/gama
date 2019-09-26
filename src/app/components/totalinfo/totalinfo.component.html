@@ -1,0 +1,5 @@
+<ion-content color="darkframa" class="ion-padding width">
+    <ion-list  lines="none" class="padd borde-bottom rounded" *ngFor="let items of dataJsonModal">
+      <ion-item  class="espacio ">{{items.nombreArticulo}} ${{items.valorVenta * items.cantidad | number}} Cant X{{items.cantidad}}</ion-item>
+    </ion-list>
+  </ion-content>
